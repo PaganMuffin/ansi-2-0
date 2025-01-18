@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>ANSI 2.0 alfa 0.1</title>
+	</head>
+	<body class="min-h-screen bg-zinc-900 text-white">
+		<nav class="py-4 bg-zinc-800 border-b border-red-600/20">
+			<h1
+				class="text-2xl font-medium m-0 text-center mb-4 text-yellow-500"
+			>
+				<span class="text-red-500">ANSI</span> 2.0 <span
+					class="text-sm text-zinc-400">alfa 0.1</span
+				>
+			</h1>
+		</nav>
+		<main class="p-4 max-w-5xl mx-auto">
+			<slot />
+		</main>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>

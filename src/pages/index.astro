@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Search from "../components/search.astro";
+import EntryList from "../components/EntryList.tsx";
+---
+
+<Layout>
+	<Search />
+	<div class="mt-6">
+		<EntryList client:only="react" />
+	</div>
+</Layout>

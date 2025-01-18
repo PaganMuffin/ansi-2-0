@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "app",
+  "compatibility_date": "2025-01-09",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "pages_build_output_dir": "./dist",
+  "observability": {
+    "enabled": true
+  },
+  "d1_databases": [
+    {
+      "database_id": "5f9dbf09-f475-4c31-9de9-25de441387af",
+      "database_name": "ansi_old",
+      "binding": "DB_ANSI_OLD"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "R2_ANSI_OLD",
+      "bucket_name": "ansi-old"
+      
+    }
+  ]
+}
