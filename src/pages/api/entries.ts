@@ -16,6 +16,17 @@ interface NewEntry {
 
 export const POST: APIRoute = async ({ request, locals }) => {
   try {
+
+    const secretKey = request.headers.get('Authorization');
+    if (secretKey !== locals.runtime.env.SECRET_KEY) {
+      return new Response(JSON.stringify({
+        error: 'Unauthorized'
+      }), { 
+        status: 401,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
     const db = locals.runtime.env.DB_ANSI_OLD;
     const entry: NewEntry = await request.json();
 
